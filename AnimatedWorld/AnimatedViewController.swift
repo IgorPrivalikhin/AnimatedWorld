@@ -34,12 +34,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func changeAnimation(_ sender: SpringButton) {
-        
         settingsPreset()
-        labelText()
-        randomPreset = presets.randomElement ()
         buttonSettings.setTitle("Run \(randomPreset ?? "")", for: .normal)
-        
+        labelText()
     }
     
     func settingsPreset() {
@@ -48,7 +45,8 @@ class ViewController: UIViewController {
         animationView.force = randomForce.randomElement () ?? 0
         animationView.duration = randomDuration.randomElement () ?? 0
         animationView.delay = randomDelay.randomElement () ?? 0
-
+        randomPreset = presets.randomElement ()
+        
         animationView.animate ()
     }
     
@@ -61,7 +59,6 @@ class ViewController: UIViewController {
         delay: \(animationView.delay)
 """
     }
-    
     
 }
 
