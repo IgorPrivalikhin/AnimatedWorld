@@ -10,55 +10,32 @@ import SpringAnimation
 
 class ViewController: UIViewController {
     
-    
+    // MARK: - IB Outlets
     @IBOutlet var animationView: SpringView!
     
-    @IBOutlet var labelSettings: UILabel!
-    @IBOutlet var buttonSettings: SpringButton!
-    
-    
-    let presets: [String] = AnimationPreset.allCases.map { $0.rawValue }
-    let curves: [String] = AnimationCurve.allCases.map { $0.rawValue }
-    let randomForce = [0, 0.5, 0.7, 1, 1.25, 1.5]
-    let randomDuration = [0, 0.5, 0.7, 1, 1.25, 1.5]
-    let randomDelay = [0.3, 0.5, 0.7, 1]
-    
-    var randomPreset: String?
-    
-    
-    override func viewDidLoad () {
-        super.viewDidLoad ()
-        buttonSettings.setTitle("Run", for: .normal)
-        settingsPreset()
-        labelText()
+    @IBOutlet var animationLabel: UILabel! {
+        didSet {
+            animationLabel.text = animation.description
+        }
     }
     
+    
+    // MARK: - Private properties
+    private var animation = Animation.getRandomAnimation()
+    
+    // MARK: - IB Actions
     @IBAction func changeAnimation(_ sender: SpringButton) {
-        settingsPreset()
-        buttonSettings.setTitle("Run \(randomPreset ?? "")", for: .normal)
-        labelText()
-    }
-    
-    func settingsPreset() {
-        animationView.animation = "\(randomPreset ?? "pop")"
-        animationView.curve = "\(curves.randomElement () ?? "spring")"
-        animationView.force = randomForce.randomElement () ?? 0
-        animationView.duration = randomDuration.randomElement () ?? 0
-        animationView.delay = randomDelay.randomElement () ?? 0
-        randomPreset = presets.randomElement ()
+        animationLabel.text = animation.description
         
-        animationView.animate ()
+        animationView.animation = animation.name
+        animationView.force = animation.force
+        animationView.duration = animation.duration
+        animationView.delay = animation.delay
+        animationView.curve = animation.curve
+        animationView.animate()
+        
+        animation = Animation.getRandomAnimation()
+        sender.setTitle("Run \(animation.name)", for: .normal)
     }
-    
-   private func labelText() {
-        labelSettings.text = """
-        preset: \(animationView.animation)
-        curve: \(animationView.curve)
-        force: \(animationView.force)
-        duration: \(animationView.duration)
-        delay: \(animationView.delay)
-"""
-    }
-    
 }
 

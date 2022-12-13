@@ -69,9 +69,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="animationLabel" destination="ocs-Zh-Hev" id="YAB-0h-FAQ"/>
                         <outlet property="animationView" destination="E6O-lc-cZe" id="vWj-jK-imc"/>
-                        <outlet property="buttonSettings" destination="lVZ-Z1-9ox" id="c0J-3Q-39U"/>
-                        <outlet property="labelSettings" destination="ocs-Zh-Hev" id="YAB-0h-FAQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
