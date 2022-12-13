@@ -43,6 +43,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F97CDF229490E9700D46458 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7F97CDEE29490D2C00D46458 /* Animation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7F97CDF329490EB700D46458 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7F97CDF029490D3D00D46458 /* DataStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7F97CDF429490EC600D46458 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				7FD642ED2943C55100AB5345 /* LaunchScreen.storyboard */,
+				7FD642E82943C55000AB5345 /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		7F97CDF529490EEC00D46458 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7FD642E22943C55000AB5345 /* AppDelegate.swift */,
+				7FD642E42943C55000AB5345 /* SceneDelegate.swift */,
+				7FD642F02943C55100AB5345 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7F97CDF629490F3B00D46458 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7FD642E62943C55000AB5345 /* AnimatedViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7F97CDF729490F4100D46458 /* Resurces */ = {
+			isa = PBXGroup;
+			children = (
+				7FD642EB2943C55100AB5345 /* Assets.xcassets */,
+			);
+			path = Resurces;
+			sourceTree = "<group>";
+		};
 		7FD642D62943C55000AB5345 = {
 			isa = PBXGroup;
 			children = (
@@ -62,15 +113,12 @@
 		7FD642E12943C55000AB5345 /* AnimatedWorld */ = {
 			isa = PBXGroup;
 			children = (
-				7FD642E22943C55000AB5345 /* AppDelegate.swift */,
-				7FD642E42943C55000AB5345 /* SceneDelegate.swift */,
-				7FD642E62943C55000AB5345 /* AnimatedViewController.swift */,
-				7F97CDEE29490D2C00D46458 /* Animation.swift */,
-				7F97CDF029490D3D00D46458 /* DataStore.swift */,
-				7FD642E82943C55000AB5345 /* Main.storyboard */,
-				7FD642EB2943C55100AB5345 /* Assets.xcassets */,
-				7FD642ED2943C55100AB5345 /* LaunchScreen.storyboard */,
-				7FD642F02943C55100AB5345 /* Info.plist */,
+				7F97CDF529490EEC00D46458 /* App */,
+				7F97CDF629490F3B00D46458 /* ViewControllers */,
+				7F97CDF229490E9700D46458 /* Models */,
+				7F97CDF329490EB700D46458 /* Services */,
+				7F97CDF429490EC600D46458 /* StoryBoards */,
+				7F97CDF729490F4100D46458 /* Resurces */,
 			);
 			path = AnimatedWorld;
 			sourceTree = "<group>";
